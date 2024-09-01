@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Globe</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFF5E1; /* Cream background */
+            color: #333; /* Dark text for contrast */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: #FF69B4;
+        }
+        .logo {
+            height: 120px;
+        }
+        h1 {
+            font-family:'Courier ';
+        }
+        .navbar {
+            background-color: transparent !important;
+            border-bottom: 1px solid #FFB6C1; /* Light pink border */
+        }
+        .navbar-nav {
+            width: 100%;
+            justify-content: space-around;
+        }
+        .nav-item {
+            flex: 1;
+            text-align: center;
+        }
+        .nav-link {
+            display: block;
+            padding: 10px 0;
+            color: #FF69B4; /* Hot pink text */
+        }
+        .nav-link.active {
+            border-top: 3px solid #FF69B4; /* Hot pink border */
+            background-color: #FFB6C1; /* Light pink background */
+        }
+        .content {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+        #quienes_somos {
+            background-image: url('https://previews.123rf.com/images/taszanatasha/taszanatasha1511/taszanatasha151100272/47574884-sin-patr%C3%B3n-lindo-hecho-de-dulces-de-bosquejo-dibujado-a-mano-sobre-fondo-claro-de-dibujos-animados.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: #6b584e;
+        }
+        #mision {
+            background-image: url(Mision.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: whitesmoke;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        #vision {
+            background-image: url('https://image.slidesdocs.com/responsive-images/background/pop-of-color-sweet-lollipop-candy-on-a-stick-in-pastel-setting-powerpoint-background_a72d856f47__960_540.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        #historia {
+            background-image: url('https://image.slidesdocs.com/responsive-images/background/pastel-coloured-marshmallow-sweets-pattern-creates-a-sweet-texture-powerpoint-background_80f10c4091__960_540.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        #marcas {
+            padding: 20px;
+            color: #333;
+        }
+        .contact-info {
+            background-color: #FF69B4; /* Hot pink background */
+            padding: 20px;
+            color: white;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        #formulario{
+            color: #FF69B4;
+        }
+        #boton_formulario{
+            background-color: #FF69B4;
+        }
+    </style>
+</head>
+<body onload="showContent('mision')">
+    <div class="container">
+        <div class="header">
+            <img src="Logo.png" alt="Logo" class="logo">
+            <h1 class="text-center">Agile Globe</h1>
+        </div>
+        
+    </div>
+    <div id="quienes_somos">
+        <h1>Agile Globe, un dulce sueño para el mundo</h1>
+        <p> somos apasionados por endulzar la vida de nuestros clientes con productos de la más alta calidad. Fundada en el corazón de Colombia, nuestra dulcería ha crecido con la misión de llevar la alegría y el sabor de nuestros dulces a cada rincón del mundo.</p>
+        <p>Desde nuestros inicios, hemos combinado tradición y modernidad para crear una amplia gama de productos que deleitan a personas de todas las edades. Nuestro equipo de expertos artesanos utiliza ingredientes seleccionados cuidadosamente para garantizar que cada bocado sea una experiencia única y memorable.</p>
+    </div>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showContent('mision')">Misión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showContent('vision')">Visión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showContent('historia')">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showContent('marcas')">Marcas Aliadas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mt-4">
+        <div id="mision" class="content active">
+            <h1>Nuestra Mision</h1>
+            <p></p>
+            <p>Ofrecemos un servicio de confiteriade alta calidad a nuestros clientes, brindando unos deliciosos Dulces y gasolinas que satisfagan sus necesidades, manteniendo siempre los mas altos estandares de frescura, sabor y servicio al cliente, ya que estamos para ofrecerles atencion al cliente extrangero</p>
+        </div>
+        <div id="vision" class="content">
+            <h1>Nuestra Vision</h1>
+            <p></p>
+            <p>Para el año 2028, queremos ser reconocidos como el mejor servocio al cliente en confiteria al por mayor, siendo mayormente reconocido por nuestra excelencia en calidad, innovacion y servicio al cliente, tabien buscamos expandir nuestra presencia en el mercado nacionale internacional</p>
+        </div>
+        <div id="historia" class="content">
+            <h1>Nuestra Historia</h1>
+            <p></p>
+        <p>Agile Globe es una empresa que surgió durante la pandemia, adaptándose rápidamente a los cambios y desafíos del mercado. Inspirada en el movimiento ágil, Agile Globe se dedica a ofrecer soluciones flexibles y eficientes para sus clientes, permitiéndoles responder de manera efectiva a las necesidades cambiantes.</p>
+        <p>El movimiento ágil comenzó a ganar popularidad a principios de los años 2000 con la publicación del Manifiesto Ágil en 2001. Este manifiesto fue creado por un grupo de desarrolladores de software que buscaban una manera más eficiente y flexible de trabajar, en contraste con los métodos tradicionales como el modelo en cascada.</p>
+        <p>Durante la pandemia, muchas empresas adoptaron metodologías ágiles para adaptarse rápidamente a los cambios y desafíos. La agilidad permite a las organizaciones responder de manera más efectiva a las necesidades del mercado y a las circunstancias cambiantes, lo que ha sido crucial en tiempos de incertidumbre.</p>
+        </div>
+        <div id="marcas" class="content">
+            <p>Contamos con una lista de marcas aliadas tales como:</p>
+            <ul>
+                <li>Alkosto <img src="Logo_Alkosto.png" alt="Colombina Logo" style="height:60px;"></li>
+                <li>SENA <img src="Logo_sena.png" alt="SENA Logo" style="height: 20px;"></li>
+                <li>Makro <img src="Logo_Makro.png" alt="Colgate Logo" style="height: 20px;"></li>
+                <li>Price Smart <img src="Logo_PriceSmart.png" alt="Colgate Logo" style="height: 20px;"></li>
+                <li>Amazon <img src="Logo_amazon.png" alt="Colgate Logo" style="height: 20px;"></li>
+                <li>Candy Jobs <img src="Logo_CandyJobs.png" alt="Colgate Logo" style="height: 20px;"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-4" id="formulario">
+        <h2>Formulario de Contacto</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="phone">Número Telefónico</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número telefónico">
+            </div>
+            <div class="form-group">
+                <label for="address">Dirección</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Ingresa tu mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="boton_formulario">Enviar</button>
+        </form>
+    </div>
+
+    <div class="container mt-4 contact-info">
+        <h2>Contáctanos</h2>
+        <p>Correo: ServicioAlCliente@AgileGlobe.com</p>
+        <p>Número Telefónico: +576016687591</p>
+        <p>Whatsapp: <a href="https://wa.me/+573213373273">+573213373273</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content').forEach(function(content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+
+            document.querySelectorAll('.nav-link').forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.nav-link[onclick="showContent('${id}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
